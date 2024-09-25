@@ -101,103 +101,78 @@ function getDayAbbreviation(day) {
   return abbreviations[day] || day.charAt(0);
 }
 
-// Function to determine the next meal based on current time// Function to determine the next meal based on current time
-function getNextMeal() {
-  const now = new Date();
-  const currentHour = now.getHours();
-  let nextMeal = '';
-
-  if (currentHour <9) {
-    nextMeal = 'breakfast';
-  } else if (currentHour < 14) {
-    nextMeal = 'lunch';
-  } else if (currentHour < 18) {
-    nextMeal = 'snack';
-  } else {
-    nextMeal = 'dinner';
-  }
-
-  return nextMeal;
+// Function to get the current time in the desired time zone (for example, 'Asia/Kolkata')
+// Function to get the current time in the desired time zone (for example, 'Asia/Kolkata')
+function getCurrentTimeInTimeZone(timeZone) {
+  const options = {
+    timeZone: timeZone,
+    hour12: false,
+    hour: '2-digit',
+    minute: '2-digit',
+  };
+  const formatter = new Intl.DateTimeFormat([], options);
+  const parts = formatter.formatToParts(new Date());
+  const hourPart = parts.find(part => part.type === 'hour');
+  return parseInt(hourPart.value, 10);
 }
 
-// Function to highlight the next meal and scroll to it
+// Determine the next meal based on the time
+function getNextMeal() {
+  const currentHour = getCurrentTimeInTimeZone('Asia/Kolkata'); // Adjust time zone here
+  if (currentHour < 10) return 'breakfast';
+  if (currentHour < 14) return 'lunch';
+  if (currentHour < 18) return 'snack';
+  return 'dinner';
+}
+
+// Scroll to and highlight the next meal
 function scrollToNextMeal() {
   const nextMeal = getNextMeal();
-  
-  // First, remove any existing highlight class
-  const previouslyHighlighted = document.querySelector('.meal.highlight-next-meal');
-  if (previouslyHighlighted) {
-    previouslyHighlighted.classList.remove('highlight-next-meal');
-  }
-
-  // Now, apply the highlight to the next meal
-  if (nextMeal) {
-    const mealElement = document.getElementById(nextMeal);
-    if (mealElement) {
-      mealElement.classList.add('highlight-next-meal');  // Highlight the next meal
-      mealElement.scrollIntoView({ behavior: 'smooth', block: 'start' });  // Scroll to it
-    }
+  const mealElement = document.getElementById(nextMeal);
+  if (mealElement) {
+    mealElement.classList.add('highlight-next-meal');
+    mealElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }
 
-// Function to automatically select the current day and scroll to the next meal
-function autoSelectDayAndMeal() {
+// Auto-select the current day based on the time
+function autoSelectDay() {
   const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-  const now = new Date();
-
-  // Get current day of the week
-  const currentDay = daysOfWeek[now.getDay()];
-
-  // Fetch the menu for the current day
-  fetchMenu(currentDay);
+  const currentDay = daysOfWeek[new Date().getDay()];
 
   // Highlight the current day button
   const dayButton = document.querySelector(`button[data-day="${currentDay}"]`);
-  if (dayButton) {
-    dayButton.classList.add('active-day');
-  }
+  if (dayButton) dayButton.classList.add('active-day');
 
-  // Scroll to the next meal and highlight it, but only if the current day has not been scrolled yet
-  const lastAutoScrollDay = localStorage.getItem('lastAutoScrollDay');
-
-  if (lastAutoScrollDay !== currentDay) {
-    scrollToNextMeal();  // Scroll and highlight the next meal
-    localStorage.setItem('lastAutoScrollDay', currentDay);  // Mark that auto-scroll was done for the day
-  }
-
-  // Add event listeners for manual day change
-  const buttons = document.querySelectorAll('.day-selector button');
-  buttons.forEach(button => {
-    button.addEventListener('click', function () {
-      const selectedDay = this.getAttribute('data-day');
-      
-      // Remove 'active-day' class from all buttons
-      buttons.forEach(btn => btn.classList.remove('active-day'));
-      // Add 'active-day' class to clicked button
-      this.classList.add('active-day');
-      
-      // Fetch menu for selected day
-      fetchMenu(selectedDay);
-      
-      // Remove highlight from all meals
-      const highlightedMeals = document.querySelectorAll('.meal.highlight-next-meal');
-      highlightedMeals.forEach(meal => meal.classList.remove('highlight-next-meal'));
-      
-      // If the selected day is the current day, reapply the highlight
-      if (selectedDay === currentDay && lastAutoScrollDay !== currentDay) {
-        scrollToNextMeal();
-        localStorage.setItem('lastAutoScrollDay', currentDay);
-      }
-    });
-  });
+  // Fetch and display the menu for the current day
+  fetchMenu(currentDay);
 }
 
+  // Reset any previously highlighted meals
+  document.querySelectorAll('.meal').forEach(meal => {
+    meal.classList.remove('highlight-next-meal');
+  });
 
-// Initial setup on page load
-window.onload = () => {
-  updateButtonLabels();
-  autoSelectDayAndMeal();
-};
+  // Optionally, update the displayed menu content for the selected day
 
-// Update button labels on window resize
-window.onresize = updateButtonLabels;
+
+// Add event listeners for day selection
+document.querySelectorAll('.day-selector button').forEach(button => {
+  button.addEventListener('click', (event) => {
+    // Remove 'active-day' class from all buttons
+    document.querySelectorAll('.day-selector button').forEach(btn => btn.classList.remove('active-day'));
+
+    // Highlight the selected day
+    const selectedDay = event.target.getAttribute('data-day');
+    event.target.classList.add('active-day');
+
+    // Fetch the menu for the selected day
+    fetchMenu(selectedDay);
+  });
+});
+
+// Auto-select the day and scroll to the next meal on the first load
+window.addEventListener('DOMContentLoaded', () => {
+  autoSelectDay();
+  scrollToNextMeal();
+});

@@ -87,17 +87,14 @@ header {
   border: 1px solid #ddd;
   border-radius: 5px;
   color: white;
-  font-weight:bold;
+  font-weight: bold;
 }
 
 /* Highlighting the next meal */
 .meal.highlight-next-meal {
   border: 2px solid #ff9800; /* Highlight border for the next meal */
-  background-color: #000000; /* Yellow background */
+  background-color: #000000;
 }
-
-
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
