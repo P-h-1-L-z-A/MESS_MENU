@@ -1,46 +1,46 @@
 // Static menu data
 const menuData = {
   "Monday": {
-    "breakfast": ["Poha", "Boiled Eggs", "Tea/Coffee"],
-    "lunch": ["Rice", "Dal", "Paneer Curry", "Chapati", "Salad"],
-    "snack": ["Samosa", "Tea"],
-    "dinner": ["Rice", "Chicken Curry", "Chapati", "Ice Cream"]
+    "breakfast": ["Poha", "Jalebi" ,"Eggs", "Tea/Coffee"],
+    "lunch": ["Aloo Baigan","Kala Chana","Rice", "Dal", "Rasam"],
+    "snack": ["Mirchi Pakoda", "Tea"],
+    "dinner": ["Mix Veg", "Dal Makhani", "Rice"]
   },
   "Tuesday": {
-    "breakfast": ["Idli", "Sambar", "Tea/Coffee"],
-    "lunch": ["Rice", "Rajma", "Mix Veg", "Roti", "Papad"],
-    "snack": ["Bread Pakora", "Tea"],
-    "dinner": ["Rice", "Egg Curry", "Chapati", "Gulab Jamun"]
+    "breakfast": ["Idli", "Sambar", "Coconut Chutney","Tea/Coffee"],
+    "lunch": ["Lauki Chana", "White Matar Aloo","Rice", "Dal", "Rasam"],
+    "snack": ["Palak Pakora", "Tea"],
+    "dinner": ["Bhindi Aloo", "Rajma","Rice"]
   },
   "Wednesday": {
-    "breakfast": ["Paratha", "Curd", "Tea/Coffee"],
-    "lunch": ["Rice", "Chole", "Mix Veg", "Chapati", "Salad"],
-    "snack": ["Vada Pav", "Tea"],
-    "dinner": ["Rice", "Fish Curry", "Chapati", "Kheer"]
+    "breakfast": ["Pav Bhaji", "Tea/Coffee"],
+    "lunch": ["Aloo Palak","Seasonal Veg","Rice", "Dal", "Rasam"],
+    "snack": ["Samosa", "Tea"],
+    "dinner": ["Matar Paneer", "Kadai Paneer","Rice"]
   },
   "Thursday": {
-    "breakfast": ["Upma", "Boiled Eggs", "Tea/Coffee"],
-    "lunch": ["Rice", "Matar Paneer", "Chapati", "Salad"],
-    "snack": ["Pakoras", "Tea"],
-    "dinner": ["Rice", "Mutton Curry", "Chapati", "Ice Cream"]
+    "breakfast": ["Sambhar", "Uttapam","Coconut Chutney", "Tea/Coffee"],
+    "lunch": ["Aloo Jeera", "Kadai Paneer", "Dal", "Rice" ,"Rasam"],
+    "snack": ["Bhel/Sandwich", "Tea"],
+    "dinner": ["Mix Sabji", "Dal", "Rice"]
   },
   "Friday": {
-    "breakfast": ["Bread Toast", "Butter", "Tea/Coffee"],
-    "lunch": ["Rice", "Butter Chicken", "Chapati", "Salad"],
-    "snack": ["Bhel Puri", "Tea"],
-    "dinner": ["Rice", "Prawn Curry", "Chapati", "Gulab Jamun"]
+    "breakfast": ["Puri Bhaji", "Chole Bhature", "Tea/Coffee"],
+    "lunch": ["Mix Veg", "Grains Mix Sabji", "Rice", "Dal" ,"Rasam"],
+    "snack": ["Pasta", "Tea"],
+    "dinner": ["Baigan Masala", "Dal", "Rice"]
   },
   "Saturday": {
-    "breakfast": ["Dosa", "Sambar", "Tea/Coffee"],
-    "lunch": ["Rice", "Chicken Curry", "Chapati", "Salad"],
-    "snack": ["Samosa", "Tea"],
-    "dinner": ["Rice", "Paneer Tikka", "Chapati", "Kheer"]
+    "breakfast": ["Dosa", "Sambar","Cocunet Chutney", "Tea/Coffee"],
+    "lunch": ["Chole","Khichdi","Aloo Chokha"],
+    "snack": ["Toast", "Tea"],
+    "dinner": ["Green Matar Aloo", "Dal", "Rice"]
   },
   "Sunday": {
-    "breakfast": ["Pancakes", "Fruit Salad", "Tea/Coffee"],
-    "lunch": ["Rice", "Fish Curry", "Chapati", "Salad"],
-    "snack": ["Pakoras", "Tea"],
-    "dinner": ["Rice", "Beef Curry", "Chapati", "Ice Cream"]
+    "breakfast": ["Aloo Paratha", "Dahi", "Tea/Coffee"],
+    "lunch": ["Veg  Biryani", "Raita", "Veg Kolhapuri"],
+    "snack": ["Biscuit", "Tea"],
+    "dinner": ["Matar Paneer", "Kadai Paneer", "Dal", "Rice"]
   }
 };
 
