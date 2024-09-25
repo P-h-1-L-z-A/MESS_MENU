@@ -1,0 +1,115 @@
+/* Basic Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 80vh;
+  margin: 20px auto;
+  background-color: #000000;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+header {
+  text-align: center;
+}
+
+.day-selector {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.day-selector button {
+  padding: 10px 15px;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  background-color: #5cabff;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+  flex: 1;
+  text-align: center;
+}
+
+.day-selector button:hover {
+  background-color: #005ec2;
+  transform: scale(1.05);
+}
+
+/* Style for the active day button */
+.day-selector button.active-day {
+  background-color: #e39800; /* Highlight active day */
+  transform: scale(1.15);
+}
+
+#menu {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+  margin-top: 20px;
+}
+
+/* Meal Category Styles */
+.meal {
+  margin: 10px 0;
+  padding: 15px;
+  background-color: #000000;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.meal h2 {
+  font-size: 1.5em;
+  color: #9b9b9b;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #007BFF;
+  padding-bottom: 5px;
+}
+
+.meal ul {
+  list-style: none;
+  padding: 0;
+}
+
+.meal li {
+  background-color: #000000;
+  padding: 10px 15px;
+  margin-bottom: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  color: white;
+  font-weight:bold;
+}
+
+/* Highlighting the next meal */
+.meal.highlight-next-meal {
+  border: 2px solid #ff9800; /* Highlight border for the next meal */
+  background-color: #000000; /* Yellow background */
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .day-selector button {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .day-selector button {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+}
