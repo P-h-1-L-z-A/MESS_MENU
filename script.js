@@ -68,7 +68,14 @@ function fetchMenu(day) {
     
     mealDiv.appendChild(mealList);
     menuDiv.appendChild(mealDiv);
+    
   });
+
+
+  document.querySelectorAll('.meal').forEach(meal => {
+    meal.classList.remove('highlight-next-meal');
+  });
+  
 }
 
 // Function to update button text based on screen width
