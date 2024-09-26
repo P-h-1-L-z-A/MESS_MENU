@@ -82,7 +82,7 @@ header {
 
 .meal li {
   background-color: #000000;
-  padding: 10px 15px;
+  padding: 8px 12px;
   margin-bottom: 5px;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -104,7 +104,7 @@ header {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 380px) {
   .day-selector button {
     font-size: 14px;
     padding: 5px 10px;
