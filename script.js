@@ -40,7 +40,7 @@ const menuData = {
     "breakfast": ["Aloo Paratha", "Dahi", "Tea/Coffee"],
     "lunch": ["Veg  Biryani", "Raita", "Veg Kolhapuri"],
     "snack": ["Biscuit", "Tea"],
-    "dinner": ["Matar Paneer", "Kadai Paneer", "Dal", "Rice"]
+    "dinner": ["Matar Paneer/Kadai Paneer", "Dal", "Rice"]
   }
 };
 
