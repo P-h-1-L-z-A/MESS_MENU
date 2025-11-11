@@ -1,46 +1,46 @@
 // Static menu data
 const menuData = {
   "Monday": {
-    "breakfast": ["Poha", "Jalebi" ,"Eggs", "Tea/Coffee"],
-    "lunch": ["Aloo Baigan","Kala Chana","Rice", "Dal", "Rasam"],
-    "snack": ["Mirchi Pakoda", "Tea"],
-    "dinner": ["Mix Veg", "Dal Makhani", "Rice"]
+    "breakfast": ["Idli", "Sambhar" ,"Chutney","Fruit/Eggs/Bread Butter", "Milk/Tea/Coffee"],
+    "lunch": ["Chana Pattagobi","Kala Chana", "Dal/Rice", "Rasam/Salad/Curd"],
+    "snack": ["Pongulu", "Tea/Coffee/Milk"],
+    "dinner": ["Matar Aloo (Dry)", "Jeera Rice/Dal Makhni", "Jalebi"]
   },
   "Tuesday": {
-    "breakfast": ["Idli", "Sambar", "Coconut Chutney","Tea/Coffee"],
-    "lunch": ["Lauki Chana", "White Matar Aloo","Rice", "Dal", "Rasam"],
-    "snack": ["Palak Pakora", "Tea"],
-    "dinner": ["Bhindi Aloo", "Rajma","Rice"]
+    "breakfast": ["Onion Paratha", "Tomato Chutney","Milk/Tea/Coffee"],
+    "lunch": ["Sprout Curry", "Aloo Jeera", "Jeera Rice/Dal", "Rasam/Salad/Curd"],
+    "snack": ["Pakora", "Tea/Coffee/Milk"],
+    "dinner": ["Aloo Bhindi (Dry)", "Matar Rice/Dal","Custard Fruit"]
   },
   "Wednesday": {
-    "breakfast": ["Pav Bhaji", "Tea/Coffee"],
-    "lunch": ["Aloo Palak","Seasonal Veg","Rice", "Dal", "Rasam"],
-    "snack": ["Samosa", "Tea"],
-    "dinner": ["Matar Paneer", "Kadai Paneer","Rice"]
+    "breakfast": ["Pav Bhaji", "Onion/Lemon" , "Milk/Tea/Coffee"],
+    "lunch": ["Pumpkin Gravy","Matar-Cauliflower","Matar Rice/Dal", "Rasam/Salad/Curd"],
+    "snack": ["Samosa", "Tea/Coffee/Milk"],
+    "dinner": ["Kadai Paneer", "Jeera Rice/Dal","Bamboo Sewai dry"]
   },
   "Thursday": {
-    "breakfast": ["Sambhar", "Uttapam","Coconut Chutney", "Tea/Coffee"],
-    "lunch": ["Aloo Jeera", "Kadai Paneer", "Dal", "Rice" ,"Rasam"],
-    "snack": ["Bhel/Sandwich", "Tea"],
-    "dinner": ["Mix Sabji", "Dal", "Rice"]
+    "breakfast": ["3 Pieces Medu Vada", "Sambhar", "Milk/Tea/Coffee"],
+    "lunch": ["Aloo Jeera", "Kadai Paneer", "Dal", "Rice" ,"Rasam/Salad/Curd"],
+    "snack": ["Hakka Noodles", "Tea/Coffee/Milk"],
+    "dinner": ["White Kidney beans", "Fried Rice", "Schezwan Chutney", "Rice Kheer"]
   },
   "Friday": {
-    "breakfast": ["Puri Bhaji", "Chole Bhature", "Tea/Coffee"],
-    "lunch": ["Mix Veg", "Grains Mix Sabji", "Rice", "Dal" ,"Rasam"],
-    "snack": ["Pasta", "Tea"],
-    "dinner": ["Baigan Masala", "Dal", "Rice"]
+    "breakfast": ["Misal Pav", "Onion/Lemon", "Milk/Tea/Coffee"],
+    "lunch": ["Kidney Bean curry", "Aloo Palak/Methi", "Tomato Rice" ,"Rasam/Salad"],
+    "snack": ["Wet-Bhel", "Tea/Coffee/Milk"],
+    "dinner": ["White matar", "Veg Biryani","Boondi Raita", "Sabudana Kheer"]
   },
   "Saturday": {
-    "breakfast": ["Dosa", "Sambar","Cocunet Chutney", "Tea/Coffee"],
-    "lunch": ["Chole","Khichdi","Aloo Chokha"],
-    "snack": ["Toast", "Tea"],
-    "dinner": ["Green Matar Aloo", "Dal", "Rice"]
+    "breakfast": ["Masala Dosa", "Sambar", "Milk/Tea/Coffee"],
+    "lunch": ["Chhole Sabji","Spicy Dry Khichdi","Boondi Raita","Aloo Chokha"],
+    "snack": ["Pasta", "Tea/Coffee/Milk"],
+    "dinner": ["Aloo Bhujia sabji", "Jeera Rice/Dal Tadka", "Balu Shahi"]
   },
   "Sunday": {
-    "breakfast": ["Aloo Paratha", "Dahi", "Tea/Coffee"],
-    "lunch": ["Veg  Biryani", "Raita", "Veg Kolhapuri"],
-    "snack": ["Biscuit", "Tea"],
-    "dinner": ["Matar Paneer/Kadai Paneer", "Dal", "Rice"]
+    "breakfast": ["Aloo Paratha", "Dahi", "Milk/Tea/Coffee"],
+    "lunch": ["Aloo Matar", "Raita", "Veg Biryani"],
+    "snack": ["Aloo Pakoda", "Tea/Coffee/Milk"],
+    "dinner": ["Paneer Matar", "Puri", "Matar Rice/Dal","Gulab Jamun"]
   }
 };
 
@@ -176,3 +176,4 @@ window.addEventListener('DOMContentLoaded', () => {
   autoSelectDay();
   scrollToNextMeal();
 });
+
